@@ -18,15 +18,14 @@ It supports both Windows and Linux.  To build on Windows, download the latest Vi
 To build on Linux, you can either open the project using QT Creator or build it using qmake.
 To build with qmake:
 
+```
 cd OpenAuraSDK
-
 qmake OpenAuraSDK.pro
-
 make
-
+```
 You'll have to enable user access to your SMbus if you don't run as root, for instance:
 
-sudo chmod 777 /dev/i2c-0
+`sudo chmod 777 /dev/i2c-0`
 
 You can figure out which SMBus is your motherboard's by using i2cdetect -l. For AMD boards, the second SMBus isn't currently picked up by the kernel driver and that seems to be where Asus wired the Aura controllers so I have a kernel patch here:
 
